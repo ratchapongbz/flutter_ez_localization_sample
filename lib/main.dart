@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ez_localization_sample/home_page.dart';
+import 'package:flutter_ez_localization_sample/localization/providers/localization_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,13 +32,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('device locale: ${context.deviceLocale}');
-
-    return MaterialApp(
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      home: const HomePage(),
+    return MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => LocalizationProvider())],
+      child: MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        home: const HomePage(),
+      ),
     );
   }
 }

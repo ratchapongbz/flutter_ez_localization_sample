@@ -20,6 +20,8 @@ class HomePage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text('hello_world'.tr()),
+              const SizedBox(height: 15),
+              Text('best_football_player_name'.tr()),
             ],
           ),
         ),

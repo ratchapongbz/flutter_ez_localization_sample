@@ -1,13 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ez_localization_sample/home_page.dart';
+import 'package:flutter_ez_localization_sample/localization/asset_loaders/firebase_storage_asset_loader.dart';
 import 'package:flutter_ez_localization_sample/localization/providers/localization_provider.dart';
-import 'package:flutter_ez_localization_sample/localization/utils/custom_http_asset_loader.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const EzLocalizationApp());
 }
 
@@ -23,7 +25,7 @@ class EzLocalizationApp extends StatelessWidget {
       ],
       fallbackLocale: const Locale('en'),
       path: 'https://mock-localization-api.herokuapp.com/localization',
-      assetLoader: const CustomHttpAssetLoader(),
+      assetLoader: const FirebaseStorageAssetLoader(),
       child: const MyApp(),
     );
   }

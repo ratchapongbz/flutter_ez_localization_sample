@@ -17,7 +17,7 @@ class CustomHttpAssetLoader extends AssetLoader {
       }
       return null;
     } catch (e) {
-      print('localization loader load failed with error: ${e.toString()}');
+      print('localization http loader load failed with error: ${e.toString()}');
       return null;
     }
   }

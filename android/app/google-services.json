@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "244130702513",
+    "project_id": "flutter-sandbox-b37bf",
+    "storage_bucket": "flutter-sandbox-b37bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244130702513:android:60ce1b42b689ac642cee90",
+        "android_client_info": {
+          "package_name": "com.ratchapongbz.ezlocalization"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244130702513-2ghcvpb187d83qpsu5sgc69akj6n0okr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCS7ekCwotDhXjZZlvF0IZxKD3cN_sjfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244130702513-2ghcvpb187d83qpsu5sgc69akj6n0okr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
